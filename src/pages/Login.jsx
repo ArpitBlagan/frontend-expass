@@ -20,8 +20,8 @@ export default function Login() {
       }
       const d=await userLogin(val).unwrap();
       console.log(d);
-      navigate('/');
-    }catch(err){
+      navigate('/');window.location.reload();
+    }catch(err){ 
       console.log(err);
       alert(err.data.message);
     }
